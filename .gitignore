@@ -1,0 +1,11 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# node dev local env
+.env
+.DS_Store
+__node_modules
