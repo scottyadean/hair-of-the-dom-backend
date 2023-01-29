@@ -1,0 +1,11 @@
+env: development
+region: us-east-1
+deploy_bucket: sls-artifacts-dev
+
+env_vars:
+  REGION: us-east-1
+  IS_OFFLINE: true
+  SLS_DEBUG: "*"
+  LOCAL_SERVER: "sls"
+  NODE_ENV: development
+  DB_URL: 'mongodb://localhost/lytebuy-development'

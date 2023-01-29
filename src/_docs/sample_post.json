@@ -1,0 +1,31 @@
+ {
+
+    "slug":"my-first-post",
+    "title": "My First Post",
+    "description": "Example of a post",
+    "description_sort": "Example of a post",
+    "image": "https://scottdean.s3.us-west-2.amazonaws.com/hotd/domdoge.png",
+    "catagory": "javascript",
+    "repo_link": "https://github.com/scottyadean/hair-of-the-dom-backend",
+    "post_body":[
+
+    {
+        "type": "paragraph",
+        "caption":"post info",
+        "content": "This is some info about the post",
+        "toggle_to_show": false
+    },
+
+    {
+        "type": "code",
+        "caption":"example code block",
+        "content": "const somthing = (arg) => { console.log(arg)}",
+        "toggle_to_show": false
+    }
+   
+    ],
+    "inactive": false,
+    "views": 0,
+    "created_at": "2020-03-09"
+
+}

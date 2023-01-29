@@ -1,0 +1,33 @@
+# Happy Coding!
+custom:
+  stage: ${opt:stage, 'development'}
+
+service: hairofthedom-service
+
+plugins:
+  - serverless-offline
+  
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: ${self:custom.stage}
+  memorySize: 128
+  timeout: 10
+  region: ${file(./conf/${self:custom.stage}.yml):region}
+  deploymentBucket:
+    name: ${file(./conf/${self:custom.stage}.yml):deploy_bucket}
+
+exclude:
+  - node_modules/**
+
+functions:
+  app:
+    handler: handler.app
+    environment: ${file(./conf/${self:custom.stage}.yml):env_vars}
+    events:
+      - http: ANY /
+      - http:
+          path: '{proxy+}'
+          method: any
+          cors:
+            origin: '*'
