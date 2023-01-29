@@ -1,4 +1,6 @@
 # Happy Coding!
+frameworkVersion: '3'
+
 custom:
   stage: ${opt:stage, 'development'}
 
@@ -17,8 +19,12 @@ provider:
   deploymentBucket:
     name: ${file(./conf/${self:custom.stage}.yml):deploy_bucket}
 
-exclude:
-  - node_modules/**
+package:
+  patterns:
+    - '!.serverless/**'
+    - '!data/**'
+    - '!venv/**'
+    - '!.venv/**'
 
 functions:
   app:

@@ -8,4 +8,6 @@ env_vars:
   SLS_DEBUG: "*"
   LOCAL_SERVER: "sls"
   NODE_ENV: development
-  DB_URL: 'mongodb://localhost/lytebuy-development'
+  DB_URL: {{render::ssm:/dev/hotd/db}}
+  
+  
