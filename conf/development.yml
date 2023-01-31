@@ -8,6 +8,6 @@ env_vars:
   SLS_DEBUG: "*"
   LOCAL_SERVER: "sls"
   NODE_ENV: development
-  DB_URL: {{render::ssm:/dev/hotd/db}}
+  DB_URL: "mongodb+srv://admin:xxxxxxxxxxxxxxxxxxxxxxx@cluster0.t0mx72r.mongodb.net/?retryWrites=true&w=majority"
   
   
